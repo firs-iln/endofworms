@@ -79,7 +79,7 @@ grafana
 
 ### Задание:
 Создаем дашборд для мониторинга Nextcloud.
-![img.png](img.png)
+![img.png](docs/static/result_dashboard.png)
 
 ### Вопросы:
 
