@@ -1,5 +1,6 @@
 FROM postgres:15
 
+# это фикс
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen en_US.UTF-8
 
@@ -14,6 +15,7 @@ RUN python3 -m venv /opt/patroni-venv && \
     /opt/patroni-venv/bin/pip install --upgrade pip && \
     /opt/patroni-venv/bin/pip install patroni[zookeeper] psycopg2-binary
 
+# это фикс
 RUN mkdir -p /var/lib/postgresql/wal_archive && \
     chown -R postgres:postgres /var/lib/postgresql/wal_archive && \
     chmod 700 /var/lib/postgresql/wal_archive
